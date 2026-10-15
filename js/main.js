@@ -1,6 +1,6 @@
 // App shell: hamburger menu, section switching, footer attribution.
-import { SECTIONS, getSection, ATTRIBUTION_SHORT, PROVENANCE, LICENSE_URL } from "./sections.js?v=2";
-import { bootAtlas } from "./atlas.js?v=2";
+import { SECTIONS, getSection, ATTRIBUTION_SHORT, PROVENANCE, LICENSE_URL } from "./sections.js?v=3";
+import { bootAtlas } from "./atlas.js?v=3";
 
 const app = document.getElementById("app");
 const drawer = document.getElementById("menu-drawer");

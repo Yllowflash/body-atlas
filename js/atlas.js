@@ -6,7 +6,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { DESCRIPTIONS } from "../data/descriptions.js?v=2";
+import { DESCRIPTIONS } from "../data/descriptions.js?v=3";
 
 const SYSTEM_COLORS = {
   Cardiovascular: 0xe14b54,
@@ -36,7 +36,9 @@ function el(tag, cls, html) {
 const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
 export async function bootAtlas(host) {
-  const manifest = await (await fetch("data/manifest.json")).json().then((j) => j.models);
+  // Skin is excluded from the app entirely (per user request): it never loads,
+  // never appears in search/tabs/labels, and has no layer chip.
+  const manifest = await (await fetch("data/manifest.json")).json().then((j) => j.models.filter((m) => m.id !== "skin"));
   const byId = Object.fromEntries(manifest.map((m) => [m.id, m]));
 
   // ------------------------------------------------------------ DOM
@@ -83,7 +85,7 @@ export async function bootAtlas(host) {
 
   // bottom bar: layer chips + spread slider
   const chipsWrap = el("div", "layer-chips");
-  const chipDefs = [["skin", "Skin"], ["muscles", "Muscles"], ["organs", "Organs"], ["skeleton", "Skeleton"]];
+  const chipDefs = [["muscles", "Muscles"], ["organs", "Organs"], ["skeleton", "Skeleton"]];
   const chipBtns = {};
   for (const [key, label] of chipDefs) {
     const b = el("button", "chip", label);
@@ -181,12 +183,6 @@ export async function bootAtlas(host) {
   function makeMaterial(entry) {
     const color = SYSTEM_COLORS[entry.system] ?? 0xe14b54;
     const mat = new THREE.MeshStandardMaterial({ color, roughness: 0.55, metalness: 0.06 });
-    if (entry.id === "skin") {
-      mat.transparent = true;
-      mat.opacity = 1;
-      mat.roughness = 0.65;
-      mat.side = THREE.DoubleSide;
-    }
     return mat;
   }
 
@@ -198,8 +194,6 @@ export async function bootAtlas(host) {
     group.visible = false;
     const anchor = new THREE.Object3D();
     anchor.position.set(entry.centroid[0], entry.centroid[1], entry.centroid[2]);
-    // Skin's centroid is mid-torso: pin its label up at the neck/shoulder.
-    if (entry.id === "skin") anchor.position.z = entry.bboxMax[2] - 260;
     group.add(anchor);
     group.userData.modelId = id;
     zUpGroup.add(group);
@@ -238,10 +232,9 @@ export async function bootAtlas(host) {
   function layerVisible(id) {
     const L = state.layer;
     if (L === "body")
-      return id === "skin" || id === "musculature" || id === "skeleton-full" || !BONE_ORGANS.has(id);
-    if (L === "skin") return id === "skin";
+      return id === "musculature" || id === "skeleton-full" || !BONE_ORGANS.has(id);
     if (L === "muscles") return id === "musculature";
-    if (L === "organs") return id !== "skin" && !HEAVY_LAZY.has(id);
+    if (L === "organs") return !HEAVY_LAZY.has(id);
     if (L === "skeleton") return id === "skeleton-full";
     return false;
   }
@@ -294,7 +287,6 @@ export async function bootAtlas(host) {
       if (BONE_ORGANS.has(id)) state.layer = "organs";
       else if (id === "skeleton-full") state.layer = "skeleton";
       else if (id === "musculature") state.layer = "muscles";
-      else if (id === "skin") state.layer = "skin";
       else state.layer = "organs";
     }
     const need = layerVisible(id) ? ensureVisible(id) : Promise.resolve();
@@ -304,9 +296,9 @@ export async function bootAtlas(host) {
       const rec = models[id];
       rec.mats.forEach((m) => { m.emissive.setHex(0xff2d55); m.emissiveIntensity = 0.5; });
       applyLayer();
-      // Revealing internal structures: if the skin is still on, spread the
-      // body open so the selected structure is actually visible.
-      if (id !== "skin" && state.layer === "body" && state.spreadTarget < 0.45) {
+      // Revealing internal structures: if the body is assembled, spread it
+      // open so the selected structure is actually visible.
+      if (state.layer === "body" && state.spreadTarget < 0.45) {
         state.spreadTarget = 0.55;
         slider.value = 55;
         setFill();
@@ -359,15 +351,6 @@ export async function bootAtlas(host) {
       const off = state.spread * SPREAD_MM;
       rec.group.position.set(dx * off, dy * off, 0);
     }
-    const skin = models.skin;
-    if (skin) {
-      const op = Math.max(0, 1 - state.spread * 1.7);
-      skin.mats.forEach((m) => {
-        m.opacity = op;
-        m.depthWrite = op > 0.6;
-      });
-      skin.group.visible = layerVisible("skin") && skin.loaded && op > 0.02;
-    }
   }
   const setFill = () => slider.style.setProperty("--fill", slider.value + "%");
   slider.addEventListener("input", () => { state.spreadTarget = slider.value / 100; setFill(); });
@@ -389,14 +372,12 @@ export async function bootAtlas(host) {
   }
   const _v = new THREE.Vector3();
   const _off = new THREE.Vector3();
-  // Labels only for structures the user can actually see: internal labels
-  // stay hidden while the skin is opaque, and appear as it fades.
+  // Labels only for structures the user can actually see.
   function labelExposed(id) {
-    if (id === "skin") return true;
     if (state.layer === "organs") return true;
     if (state.layer === "muscles") return id === "musculature";
     if (state.layer === "skeleton") return id === "skeleton-full";
-    return state.spread > 0.3; // body layer: skin faded enough to see inside
+    return state.spread > 0.3;
   }
   function updateLabels() {
     const show = state.labels && state.ready;
@@ -440,7 +421,7 @@ export async function bootAtlas(host) {
   }
 
   // ------------------------------------------------------------ UI wiring
-  const SYSTEMS = ["Cardiovascular", "Respiratory", "Digestive", "Urinary", "Nervous", "Skeletal", "Muscular", "Integumentary"];
+  const SYSTEMS = ["Cardiovascular", "Respiratory", "Digestive", "Urinary", "Nervous", "Skeletal", "Muscular"];
   let activeSys = "Cardiovascular";
   for (const sys of SYSTEMS) {
     const b = el("button", "sys-tab" + (sys === activeSys ? " active" : ""), sys);
