@@ -6,7 +6,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { DESCRIPTIONS } from "../data/descriptions.js";
+import { DESCRIPTIONS } from "../data/descriptions.js?v=2";
 
 const SYSTEM_COLORS = {
   Cardiovascular: 0xe14b54,
