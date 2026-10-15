@@ -1,0 +1,25 @@
+3D BODY ATLAS — DATA ATTRIBUTION
+==================================
+
+BodyParts3D, © The Database Center for Life Science licensed under
+CC Attribution 4.0 International.
+
+All 3D models are from BodyParts3D 4.0 — an anonymized, publicly licensed
+anatomical database (The Database Center for Life Science, CC BY 4.0).
+
+License terms: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+(License verified on 2026-10-14: Creative Commons Attribution 4.0 International.)
+
+Notes:
+- The 40 organ models, full skeleton, musculature and skin meshes in
+  models/*.glb are merged (not recentered, rotated or rescaled) from the
+  BodyParts3D 4.0 Wavefront OBJ releases:
+    isa_BP3D_4.0_obj_99.zip and partof_BP3D_4.0_obj_99.zip
+  via the mapping files isa_element_parts.txt / partof_element_parts.txt.
+- Coordinates are preserved exactly as published (millimetres, Z-up,
+  +X = subject's left). The app converts Z-up to Y-up with a single root
+  transform and normalizes the whole scene as one group.
+- (Stale header comments inside the original .obj files mention an older
+  CC Attribution-ShareAlike 2.1 Japan license text; the current license
+  page for the database, last updated 2025/02/27, specifies
+  CC Attribution 4.0 International, which is what this project follows.)

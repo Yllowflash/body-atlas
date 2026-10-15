@@ -1,0 +1,1012 @@
+{
+ "models": [
+  {
+   "id": "heart",
+   "name": "Heart",
+   "system": "Cardiovascular",
+   "file": "models/heart.glb",
+   "bboxMin": [
+    -36.3,
+    -176.52,
+    1174.92
+   ],
+   "bboxMax": [
+    79.39,
+    -70.17,
+    1279.5
+   ],
+   "centroid": [
+    21.54,
+    -123.34,
+    1227.21
+   ],
+   "triangles": 102802,
+   "meshes": 83,
+   "sizeMB": 2.06
+  },
+  {
+   "id": "aorta",
+   "name": "Aorta",
+   "system": "Cardiovascular",
+   "file": "models/aorta.glb",
+   "bboxMin": [
+    -6.83,
+    -137.44,
+    946.78
+   ],
+   "bboxMax": [
+    34.84,
+    -45.09,
+    1317.09
+   ],
+   "centroid": [
+    14.0,
+    -91.26,
+    1131.93
+   ],
+   "triangles": 10188,
+   "meshes": 5,
+   "sizeMB": 0.19
+  },
+  {
+   "id": "pulmonary-trunk",
+   "name": "Pulmonary Trunk",
+   "system": "Cardiovascular",
+   "file": "models/pulmonary-trunk.glb",
+   "bboxMin": [
+    11.27,
+    -158.86,
+    1256.5
+   ],
+   "bboxMax": [
+    42.08,
+    -116.52,
+    1293.61
+   ],
+   "centroid": [
+    26.67,
+    -137.69,
+    1275.05
+   ],
+   "triangles": 1302,
+   "meshes": 1,
+   "sizeMB": 0.03
+  },
+  {
+   "id": "superior-vena-cava",
+   "name": "Superior Vena Cava",
+   "system": "Cardiovascular",
+   "file": "models/superior-vena-cava.glb",
+   "bboxMin": [
+    -26.63,
+    -127.28,
+    1274.81
+   ],
+   "bboxMax": [
+    -4.11,
+    -103.59,
+    1309.81
+   ],
+   "centroid": [
+    -15.37,
+    -115.43,
+    1292.31
+   ],
+   "triangles": 598,
+   "meshes": 1,
+   "sizeMB": 0.01
+  },
+  {
+   "id": "inferior-vena-cava",
+   "name": "Inferior Vena Cava",
+   "system": "Cardiovascular",
+   "file": "models/inferior-vena-cava.glb",
+   "bboxMin": [
+    -26.83,
+    -128.79,
+    950.89
+   ],
+   "bboxMax": [
+    -2.06,
+    -103.55,
+    1190.53
+   ],
+   "centroid": [
+    -14.44,
+    -116.17,
+    1070.71
+   ],
+   "triangles": 3080,
+   "meshes": 2,
+   "sizeMB": 0.06
+  },
+  {
+   "id": "trachea",
+   "name": "Trachea",
+   "system": "Respiratory",
+   "file": "models/trachea.glb",
+   "bboxMin": [
+    -13.12,
+    -110.13,
+    1285.09
+   ],
+   "bboxMax": [
+    12.81,
+    -77.37,
+    1395.44
+   ],
+   "centroid": [
+    -0.15,
+    -93.75,
+    1340.26
+   ],
+   "triangles": 4996,
+   "meshes": 1,
+   "sizeMB": 0.09
+  },
+  {
+   "id": "right-lung",
+   "name": "Right Lung",
+   "system": "Respiratory",
+   "file": "models/right-lung.glb",
+   "bboxMin": [
+    -116.54,
+    -173.81,
+    1014.59
+   ],
+   "bboxMax": [
+    4.83,
+    -20.94,
+    1348.02
+   ],
+   "centroid": [
+    -55.85,
+    -97.38,
+    1181.31
+   ],
+   "triangles": 73312,
+   "meshes": 156,
+   "sizeMB": 1.5
+  },
+  {
+   "id": "left-lung",
+   "name": "Left Lung",
+   "system": "Respiratory",
+   "file": "models/left-lung.glb",
+   "bboxMin": [
+    19.65,
+    -177.87,
+    1123.11
+   ],
+   "bboxMax": [
+    125.43,
+    -20.31,
+    1355.94
+   ],
+   "centroid": [
+    72.54,
+    -99.09,
+    1239.53
+   ],
+   "triangles": 41438,
+   "meshes": 124,
+   "sizeMB": 0.85
+  },
+  {
+   "id": "right-main-bronchus",
+   "name": "Right Main Bronchus",
+   "system": "Respiratory",
+   "file": "models/right-main-bronchus.glb",
+   "bboxMin": [
+    -50.42,
+    -98.49,
+    1204.03
+   ],
+   "bboxMax": [
+    -0.38,
+    -61.33,
+    1298.0
+   ],
+   "centroid": [
+    -25.4,
+    -79.91,
+    1251.01
+   ],
+   "triangles": 4468,
+   "meshes": 1,
+   "sizeMB": 0.09
+  },
+  {
+   "id": "left-main-bronchus",
+   "name": "Left Main Bronchus",
+   "system": "Respiratory",
+   "file": "models/left-main-bronchus.glb",
+   "bboxMin": [
+    0.42,
+    -93.38,
+    1220.82
+   ],
+   "bboxMax": [
+    72.35,
+    -61.0,
+    1296.71
+   ],
+   "centroid": [
+    36.38,
+    -77.19,
+    1258.76
+   ],
+   "triangles": 4136,
+   "meshes": 1,
+   "sizeMB": 0.08
+  },
+  {
+   "id": "liver",
+   "name": "Liver",
+   "system": "Digestive",
+   "file": "models/liver.glb",
+   "bboxMin": [
+    -115.06,
+    -202.41,
+    1027.94
+   ],
+   "bboxMax": [
+    94.37,
+    -43.33,
+    1183.14
+   ],
+   "centroid": [
+    -10.35,
+    -122.87,
+    1105.54
+   ],
+   "triangles": 191622,
+   "meshes": 60,
+   "sizeMB": 4.93
+  },
+  {
+   "id": "gallbladder",
+   "name": "Gallbladder",
+   "system": "Digestive",
+   "file": "models/gallbladder.glb",
+   "bboxMin": [
+    -63.28,
+    -178.56,
+    1051.07
+   ],
+   "bboxMax": [
+    -26.84,
+    -130.15,
+    1091.48
+   ],
+   "centroid": [
+    -45.06,
+    -154.36,
+    1071.28
+   ],
+   "triangles": 2396,
+   "meshes": 1,
+   "sizeMB": 0.04
+  },
+  {
+   "id": "stomach",
+   "name": "Stomach",
+   "system": "Digestive",
+   "file": "models/stomach.glb",
+   "bboxMin": [
+    -28.95,
+    -194.37,
+    1039.88
+   ],
+   "bboxMax": [
+    105.52,
+    -81.48,
+    1156.89
+   ],
+   "centroid": [
+    38.29,
+    -137.92,
+    1098.39
+   ],
+   "triangles": 1810,
+   "meshes": 1,
+   "sizeMB": 0.03
+  },
+  {
+   "id": "esophagus",
+   "name": "Esophagus",
+   "system": "Digestive",
+   "file": "models/esophagus.glb",
+   "bboxMin": [
+    -8.81,
+    -124.26,
+    1115.99
+   ],
+   "bboxMax": [
+    23.6,
+    -66.39,
+    1390.39
+   ],
+   "centroid": [
+    7.4,
+    -95.33,
+    1253.19
+   ],
+   "triangles": 578,
+   "meshes": 1,
+   "sizeMB": 0.01
+  },
+  {
+   "id": "pancreas",
+   "name": "Pancreas",
+   "system": "Digestive",
+   "file": "models/pancreas.glb",
+   "bboxMin": [
+    -56.71,
+    -146.38,
+    1004.36
+   ],
+   "bboxMax": [
+    72.67,
+    -95.41,
+    1078.1
+   ],
+   "centroid": [
+    7.98,
+    -120.9,
+    1041.23
+   ],
+   "triangles": 16962,
+   "meshes": 4,
+   "sizeMB": 0.41
+  },
+  {
+   "id": "small-intestine",
+   "name": "Small Intestine",
+   "system": "Digestive",
+   "file": "models/small-intestine.glb",
+   "bboxMin": [
+    -87.05,
+    -183.43,
+    805.29
+   ],
+   "bboxMax": [
+    106.62,
+    -103.89,
+    1077.11
+   ],
+   "centroid": [
+    9.78,
+    -143.66,
+    941.2
+   ],
+   "triangles": 54044,
+   "meshes": 56,
+   "sizeMB": 1.9
+  },
+  {
+   "id": "large-intestine",
+   "name": "Large Intestine",
+   "system": "Digestive",
+   "file": "models/large-intestine.glb",
+   "bboxMin": [
+    -126.78,
+    -196.93,
+    757.33
+   ],
+   "bboxMax": [
+    117.48,
+    -11.28,
+    1064.73
+   ],
+   "centroid": [
+    -4.65,
+    -104.11,
+    911.03
+   ],
+   "triangles": 59726,
+   "meshes": 9,
+   "sizeMB": 1.61
+  },
+  {
+   "id": "left-kidney",
+   "name": "Left Kidney",
+   "system": "Urinary",
+   "file": "models/left-kidney.glb",
+   "bboxMin": [
+    32.84,
+    -100.19,
+    984.49
+   ],
+   "bboxMax": [
+    90.38,
+    -59.59,
+    1090.44
+   ],
+   "centroid": [
+    61.61,
+    -79.89,
+    1037.47
+   ],
+   "triangles": 2982,
+   "meshes": 1,
+   "sizeMB": 0.06
+  },
+  {
+   "id": "right-kidney",
+   "name": "Right Kidney",
+   "system": "Urinary",
+   "file": "models/right-kidney.glb",
+   "bboxMin": [
+    -87.58,
+    -111.86,
+    966.81
+   ],
+   "bboxMax": [
+    -30.43,
+    -64.7,
+    1071.24
+   ],
+   "centroid": [
+    -59.0,
+    -88.28,
+    1019.03
+   ],
+   "triangles": 2310,
+   "meshes": 1,
+   "sizeMB": 0.04
+  },
+  {
+   "id": "urinary-bladder",
+   "name": "Urinary Bladder",
+   "system": "Urinary",
+   "file": "models/urinary-bladder.glb",
+   "bboxMin": [
+    -34.15,
+    -128.24,
+    789.73
+   ],
+   "bboxMax": [
+    32.62,
+    -56.53,
+    829.99
+   ],
+   "centroid": [
+    -0.76,
+    -92.38,
+    809.86
+   ],
+   "triangles": 226,
+   "meshes": 1,
+   "sizeMB": 0.01
+  },
+  {
+   "id": "left-ureter",
+   "name": "Left Ureter",
+   "system": "Urinary",
+   "file": "models/left-ureter.glb",
+   "bboxMin": [
+    23.27,
+    -119.75,
+    818.04
+   ],
+   "bboxMax": [
+    79.38,
+    -61.61,
+    1072.57
+   ],
+   "centroid": [
+    51.32,
+    -90.68,
+    945.3
+   ],
+   "triangles": 2062,
+   "meshes": 1,
+   "sizeMB": 0.04
+  },
+  {
+   "id": "right-ureter",
+   "name": "Right Ureter",
+   "system": "Urinary",
+   "file": "models/right-ureter.glb",
+   "bboxMin": [
+    -72.79,
+    -118.97,
+    811.2
+   ],
+   "bboxMax": [
+    -9.4,
+    -60.35,
+    1057.0
+   ],
+   "centroid": [
+    -41.1,
+    -89.66,
+    934.1
+   ],
+   "triangles": 1924,
+   "meshes": 1,
+   "sizeMB": 0.04
+  },
+  {
+   "id": "brain",
+   "name": "Brain",
+   "system": "Nervous",
+   "file": "models/brain.glb",
+   "bboxMin": [
+    -69.94,
+    -169.68,
+    1464.5
+   ],
+   "bboxMax": [
+    68.89,
+    10.33,
+    1630.46
+   ],
+   "centroid": [
+    -0.52,
+    -79.67,
+    1547.48
+   ],
+   "triangles": 274562,
+   "meshes": 57,
+   "sizeMB": 7.0
+  },
+  {
+   "id": "cerebellum",
+   "name": "Cerebellum",
+   "system": "Nervous",
+   "file": "models/cerebellum.glb",
+   "bboxMin": [
+    -53.93,
+    -68.47,
+    1487.24
+   ],
+   "bboxMax": [
+    52.61,
+    -12.17,
+    1540.51
+   ],
+   "centroid": [
+    -0.66,
+    -40.32,
+    1513.88
+   ],
+   "triangles": 47700,
+   "meshes": 2,
+   "sizeMB": 0.87
+  },
+  {
+   "id": "spinal-cord",
+   "name": "Spinal Cord",
+   "system": "Nervous",
+   "file": "models/spinal-cord.glb",
+   "bboxMin": [
+    -1.76,
+    -65.0,
+    1458.6
+   ],
+   "bboxMax": [
+    0.46,
+    -51.87,
+    1494.19
+   ],
+   "centroid": [
+    -0.65,
+    -58.43,
+    1476.39
+   ],
+   "triangles": 728,
+   "meshes": 1,
+   "sizeMB": 0.02
+  },
+  {
+   "id": "skull",
+   "name": "Skull",
+   "system": "Skeletal",
+   "file": "models/skull.glb",
+   "bboxMin": [
+    -76.19,
+    -190.83,
+    1422.37
+   ],
+   "bboxMax": [
+    74.86,
+    18.0,
+    1636.27
+   ],
+   "centroid": [
+    -0.67,
+    -86.42,
+    1529.32
+   ],
+   "triangles": 325252,
+   "meshes": 42,
+   "sizeMB": 8.4
+  },
+  {
+   "id": "mandible",
+   "name": "Mandible",
+   "system": "Skeletal",
+   "file": "models/mandible.glb",
+   "bboxMin": [
+    -53.85,
+    -173.83,
+    1421.63
+   ],
+   "bboxMax": [
+    52.55,
+    -89.85,
+    1506.1
+   ],
+   "centroid": [
+    -0.65,
+    -131.84,
+    1463.87
+   ],
+   "triangles": 5576,
+   "meshes": 1,
+   "sizeMB": 0.1
+  },
+  {
+   "id": "rib-cage",
+   "name": "Rib Cage",
+   "system": "Skeletal",
+   "file": "models/rib-cage.glb",
+   "bboxMin": [
+    -137.09,
+    -213.22,
+    1008.06
+   ],
+   "bboxMax": [
+    135.78,
+    -3.64,
+    1370.48
+   ],
+   "centroid": [
+    -0.65,
+    -108.43,
+    1189.27
+   ],
+   "triangles": 185996,
+   "meshes": 38,
+   "sizeMB": 4.51
+  },
+  {
+   "id": "vertebral-column",
+   "name": "Vertebral Column",
+   "system": "Skeletal",
+   "file": "models/vertebral-column.glb",
+   "bboxMin": [
+    -51.0,
+    -115.99,
+    894.83
+   ],
+   "bboxMax": [
+    49.57,
+    0.02,
+    1481.43
+   ],
+   "centroid": [
+    -0.71,
+    -57.99,
+    1188.13
+   ],
+   "triangles": 114298,
+   "meshes": 47,
+   "sizeMB": 3.45
+  },
+  {
+   "id": "pelvis",
+   "name": "Pelvis",
+   "system": "Skeletal",
+   "file": "models/pelvis.glb",
+   "bboxMin": [
+    -144.87,
+    -187.25,
+    751.95
+   ],
+   "bboxMax": [
+    144.75,
+    -1.12,
+    958.09
+   ],
+   "centroid": [
+    -0.06,
+    -94.19,
+    855.02
+   ],
+   "triangles": 14782,
+   "meshes": 7,
+   "sizeMB": 0.41
+  },
+  {
+   "id": "sacrum",
+   "name": "Sacrum",
+   "system": "Skeletal",
+   "file": "models/sacrum.glb",
+   "bboxMin": [
+    -59.59,
+    -81.4,
+    782.84
+   ],
+   "bboxMax": [
+    58.2,
+    7.25,
+    927.2
+   ],
+   "centroid": [
+    -0.69,
+    -37.07,
+    855.02
+   ],
+   "triangles": 9922,
+   "meshes": 1,
+   "sizeMB": 0.19
+  },
+  {
+   "id": "sternum",
+   "name": "Sternum",
+   "system": "Skeletal",
+   "file": "models/sternum.glb",
+   "bboxMin": [
+    -27.45,
+    -213.83,
+    1164.02
+   ],
+   "bboxMax": [
+    27.45,
+    -130.8,
+    1325.25
+   ],
+   "centroid": [
+    0.0,
+    -172.32,
+    1244.63
+   ],
+   "triangles": 8114,
+   "meshes": 3,
+   "sizeMB": 0.19
+  },
+  {
+   "id": "left-femur",
+   "name": "Left Femur",
+   "system": "Skeletal",
+   "file": "models/left-femur.glb",
+   "bboxMin": [
+    31.97,
+    -112.28,
+    368.06
+   ],
+   "bboxMax": [
+    150.24,
+    -49.48,
+    834.24
+   ],
+   "centroid": [
+    91.1,
+    -80.88,
+    601.15
+   ],
+   "triangles": 3204,
+   "meshes": 1,
+   "sizeMB": 0.06
+  },
+  {
+   "id": "left-humerus",
+   "name": "Left Humerus",
+   "system": "Skeletal",
+   "file": "models/left-humerus.glb",
+   "bboxMin": [
+    140.07,
+    -100.23,
+    1029.21
+   ],
+   "bboxMax": [
+    240.76,
+    -51.06,
+    1336.52
+   ],
+   "centroid": [
+    190.42,
+    -75.64,
+    1182.87
+   ],
+   "triangles": 3844,
+   "meshes": 1,
+   "sizeMB": 0.07
+  },
+  {
+   "id": "left-clavicle",
+   "name": "Left Clavicle",
+   "system": "Skeletal",
+   "file": "models/left-clavicle.glb",
+   "bboxMin": [
+    8.38,
+    -147.08,
+    1308.53
+   ],
+   "bboxMax": [
+    143.94,
+    -54.39,
+    1355.18
+   ],
+   "centroid": [
+    76.16,
+    -100.73,
+    1331.86
+   ],
+   "triangles": 1176,
+   "meshes": 1,
+   "sizeMB": 0.02
+  },
+  {
+   "id": "left-scapula",
+   "name": "Left Scapula",
+   "system": "Skeletal",
+   "file": "models/left-scapula.glb",
+   "bboxMin": [
+    57.06,
+    -102.84,
+    1183.95
+   ],
+   "bboxMax": [
+    166.46,
+    5.08,
+    1349.86
+   ],
+   "centroid": [
+    111.76,
+    -48.88,
+    1266.9
+   ],
+   "triangles": 28106,
+   "meshes": 1,
+   "sizeMB": 0.51
+  },
+  {
+   "id": "left-tibia",
+   "name": "Left Tibia",
+   "system": "Skeletal",
+   "file": "models/left-tibia.glb",
+   "bboxMin": [
+    35.03,
+    -114.52,
+    -6.1
+   ],
+   "bboxMax": [
+    109.45,
+    -51.98,
+    373.86
+   ],
+   "centroid": [
+    72.24,
+    -83.25,
+    183.88
+   ],
+   "triangles": 1692,
+   "meshes": 1,
+   "sizeMB": 0.03
+  },
+  {
+   "id": "left-radius",
+   "name": "Left Radius",
+   "system": "Skeletal",
+   "file": "models/left-radius.glb",
+   "bboxMin": [
+    219.84,
+    -127.25,
+    806.16
+   ],
+   "bboxMax": [
+    279.14,
+    -61.47,
+    1035.01
+   ],
+   "centroid": [
+    249.49,
+    -94.36,
+    920.59
+   ],
+   "triangles": 632,
+   "meshes": 1,
+   "sizeMB": 0.01
+  },
+  {
+   "id": "diaphragm",
+   "name": "Diaphragm",
+   "system": "Respiratory",
+   "file": "models/diaphragm.glb",
+   "bboxMin": [
+    -122.33,
+    -205.32,
+    985.85
+   ],
+   "bboxMax": [
+    120.86,
+    -25.92,
+    1192.58
+   ],
+   "centroid": [
+    -0.73,
+    -115.62,
+    1089.22
+   ],
+   "triangles": 68522,
+   "meshes": 1,
+   "sizeMB": 1.27
+  },
+  {
+   "id": "skin",
+   "name": "Skin",
+   "system": "Integumentary",
+   "file": "models/skin.glb",
+   "bboxMin": [
+    -334.12,
+    -246.78,
+    -78.11
+   ],
+   "bboxMax": [
+    332.82,
+    45.25,
+    1641.36
+   ],
+   "centroid": [
+    -0.65,
+    -100.77,
+    781.62
+   ],
+   "triangles": 203382,
+   "meshes": 1,
+   "sizeMB": 4.9
+  },
+  {
+   "id": "skeleton-full",
+   "name": "Full Skeleton",
+   "system": "Skeletal",
+   "file": "models/skeleton-full.glb",
+   "bboxMin": [
+    -323.91,
+    -236.04,
+    -70.48
+   ],
+   "bboxMax": [
+    323.94,
+    18.0,
+    1636.27
+   ],
+   "centroid": [
+    0.01,
+    -109.02,
+    782.9
+   ],
+   "triangles": 790538,
+   "meshes": 252,
+   "sizeMB": 20.65
+  },
+  {
+   "id": "musculature",
+   "name": "Musculature",
+   "system": "Muscular",
+   "file": "models/musculature.glb",
+   "bboxMin": [
+    -280.59,
+    -219.35,
+    -55.9
+   ],
+   "bboxMax": [
+    280.59,
+    24.55,
+    1506.24
+   ],
+   "centroid": [
+    0.0,
+    -97.4,
+    725.17
+   ],
+   "triangles": 817972,
+   "meshes": 126,
+   "sizeMB": 23.15
+  }
+ ]
+}
