@@ -159,7 +159,7 @@ export async function bootAtlas(host) {
   // ------------------------------------------------------------ state
   const models = {};   // id -> {entry, group, mats:[], anchor, dir, loaded}
   const state = {
-    layer: "body", spread: 0, spreadTarget: 0,
+    layer: "muscles", spread: 0, spreadTarget: 0,
     selected: null, labels: true, rotate: true, tween: null, ready: false,
   };
   const loader = new GLTFLoader();
@@ -295,6 +295,7 @@ export async function bootAtlas(host) {
       else if (id === "skeleton-full") state.layer = "skeleton";
       else if (id === "musculature") state.layer = "muscles";
       else if (id === "skin") state.layer = "skin";
+      else state.layer = "organs";
     }
     const need = layerVisible(id) ? ensureVisible(id) : Promise.resolve();
     need.then(() => {
@@ -539,7 +540,8 @@ export async function bootAtlas(host) {
   camera.position.set(0.4, 0.5, 6.4);
   controls.target.set(0, 0.1, 0);
 
-  const initial = manifest.filter((m) => !HEAVY_LAZY.has(m.id));
+  // Hero opens on the musculature: load it up front, keep only the skeleton lazy.
+  const initial = manifest.filter((m) => m.id !== "skeleton-full");
   let done = 0;
   setProgress(0, initial.length, "Starting\u2026");
   await Promise.all(initial.map((m) =>
@@ -550,9 +552,8 @@ export async function bootAtlas(host) {
   applyLayer();
   applySpread(true);
   refreshLabels();
-  // Finish the hero assembly in the background: heavy layers lazy-load with
-  // the progress pill, so the app is interactive with organs + skin first.
-  ensureHeavy("skeleton-full").then(() => ensureHeavy("musculature")).catch(() => {});
+  // The skeleton finishes loading in the background with the progress pill.
+  ensureHeavy("skeleton-full").catch(() => {});
 
   // ------------------------------------------------------------ loop
   const clock = new THREE.Clock();
