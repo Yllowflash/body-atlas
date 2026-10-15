@@ -30,7 +30,7 @@ function placeholderSection(title, blurb) {
 export const SECTIONS = [
   {
     id: "atlas",
-    title: "Body Atlas",
+    title: "Human Atlas",
     // render() is wired by main.js to boot the 3D atlas into `el`.
     render: null,
   },

@@ -266,3 +266,35 @@ input { font: inherit; }
 @media (min-width: 821px) and (max-width: 1366px) {
   .atlas-panel { width: 330px; flex-basis: 330px; }
 }
+
+/* Human Atlas: piece explorer additions */
+.atlas-count { font-size: 12px; color: var(--dim); white-space: nowrap; }
+.sys-list { display: flex; flex-direction: column; gap: 6px; overflow-y: auto; min-height: 60px; }
+.sys-presets { display: flex; flex-wrap: wrap; gap: 6px; padding-bottom: 4px; }
+.pill-btn.sm { font-size: 12px; padding: 6px 12px; }
+.sys-row {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 9px 12px; color: var(--dim); font-size: 14px; text-align: left;
+  opacity: 0.55; transition: opacity 0.15s;
+}
+.sys-row.on { opacity: 1; color: var(--txt); }
+.sys-dot { width: 12px; height: 12px; border-radius: 50%; flex: 0 0 auto; }
+.sys-name em { font-style: normal; color: var(--dim); font-size: 12px; margin-left: 6px; }
+.isolate-btn { margin-top: 10px; }
+
+/* Human Atlas: piece explorer additions */
+.atlas-count { font-size: 12px; color: var(--dim); white-space: nowrap; }
+.sys-list { display: flex; flex-direction: column; gap: 6px; overflow-y: auto; min-height: 60px; }
+.sys-presets { display: flex; flex-wrap: wrap; gap: 6px; padding-bottom: 4px; }
+.pill-btn.sm { font-size: 12px; padding: 6px 12px; }
+.sys-row {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 9px 12px; color: var(--dim); font-size: 14px; text-align: left;
+  opacity: 0.55; transition: opacity 0.15s;
+}
+.sys-row.on { opacity: 1; color: var(--txt); }
+.sys-dot { width: 12px; height: 12px; border-radius: 50%; flex: 0 0 auto; }
+.sys-name em { font-style: normal; color: var(--dim); font-size: 12px; margin-left: 6px; }
+.isolate-btn { margin-top: 10px; }
